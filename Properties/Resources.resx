@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="chg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chg.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="favicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\favicon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gallery" xml:space="preserve">
+    <value>&lt;a href="***"&gt;
+		&lt;div id="galleryLink"&gt;
+			&lt;div id="image"&gt;&lt;img src="***"&gt;&lt;/div&gt;
+			&lt;div id="text"&gt;***&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/a&gt;</value>
+    <comment>Entry for the gallery file</comment>
+  </data>
+  <data name="galleryBlurb" xml:space="preserve">
+    <value>--README-- This file contains the text that should be copied into the previously existing gallery file, to incorporate this gallery tab into the list of previous galleries</value>
+    <comment>Blurb info for output files from the gallery</comment>
+  </data>
+  <data name="index" xml:space="preserve">
+    <value>&lt;a href="***"&gt;
+		&lt;div id="contentLink"&gt;
+			&lt;div id="text"&gt;***&lt;/div&gt;
+			&lt;div id="date"&gt;***&lt;/div&gt;***
+			&lt;div id="image"&gt;&lt;img src="***/***"&gt;&lt;/div&gt;***
+		&lt;/div&gt;
+	&lt;/a&gt;</value>
+    <comment>Entry for the index file</comment>
+  </data>
+  <data name="indexBlurb" xml:space="preserve">
+    <value>--README-- This file contains the text that should be copied into the previously existing index file, to incorporate this gallery tab into the list of previous galleries</value>
+    <comment>Blurb info for output files for the index</comment>
+  </data>
+  <data name="php" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;charliehill - ***&lt;/title&gt;
+&lt;link rel="stylesheet" type="text/css" href="adhill.css"&gt;
+&lt;meta name="description" content="Charlie Hill blog - ***"&gt;
+&lt;meta name="keywords" content="Charlie Hill, ***"&gt;
+&lt;?php include('head.txt') ?&gt;
+&lt;meta property="og:site_name" content="Charlie Hill blog" /&gt;
+&lt;meta property="og:url" content="http://wwww.charlieahill.co.uk/***" /&gt;
+&lt;meta property="og:title" content="Charlie Hill blog - ***" /&gt;
+&lt;meta property="og:description" content="Charlie Hill blog - ***" /&gt;
+&lt;meta property="og:image" content="http://www.charlieahill.co.uk/***" /&gt;
+&lt;/head&gt;
+&lt;body id="start"&gt;
+&lt;div id="wrapper"&gt;
+&lt;div id="header"&gt;&lt;?php include('header.txt') ?&gt;&lt;/div&gt;
+&lt;div id="content"&gt;&lt;?php include('***') ?&gt;&lt;/div&gt;
+&lt;div id="footer"&gt;&lt;?php include('footer.txt') ?&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html</value>
+    <comment>Entire contents of the .php file</comment>
+  </data>
+  <data name="sw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="txt" xml:space="preserve">
+    <value>&lt;link rel="stylesheet" type="text/css" href="gal.css"&gt;
+&lt;div id="splitter"&gt;***&lt;/div&gt;
+&lt;div id="text"&gt;***
+&lt;br&gt;&lt;br&gt;Click on thumbnails to enlarge.&lt;/div&gt;
+&lt;div id="frame"&gt;
+&lt;div id="galleryLink"&gt;
+&lt;div id="facebook"&gt;
+&lt;div class="fb-like" data-href="http://www.charlieahill.co.uk/***" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"&gt;&lt;/div&gt;
+&lt;div class="fb-comments" data-href="http://www.charlieahill.co.uk/***" data-width="420" data-numposts="5" data-colorscheme="light"&gt;&lt;/div&gt;
+&lt;/div&gt;***
+&lt;a href="***/***" class="fancybox" rel="***" title="*** &lt;br&gt;&lt;a href='***/***' style='text-decoration: none'&gt;&lt;font color='#888888'&gt;(*** x ***px)&lt;/font&gt; &lt;img src='dl.png'&gt;&lt;/a&gt; "&gt;&lt;div id="image"&gt;&lt;img src="***/***"&gt;&lt;/div&gt;&lt;/a&gt;***
+&lt;/div&gt;
+&lt;/div&gt;</value>
+    <comment>Entire contents of the .txt file</comment>
+  </data>
+  <data name="txtag" xml:space="preserve">
+    <value>&lt;link rel="stylesheet" type="text/css" href="gal.css"&gt;
+&lt;div id="splitter"&gt;***&lt;/div&gt;
+&lt;div id="text"&gt;***
+&lt;br&gt;&lt;br&gt;Click on thumbnails to enlarge.&lt;/div&gt;
+&lt;div id="frame"&gt;
+&lt;div id="galleryLink"&gt;
+&lt;div id="facebook"&gt;
+&lt;div class="fb-like" data-href="http://www.charlieahill.co.uk/ag/***" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"&gt;&lt;/div&gt;
+&lt;div class="fb-comments" data-href="http://www.charlieahill.co.uk/ag/***" data-width="420" data-numposts="5" data-colorscheme="light"&gt;&lt;/div&gt;
+&lt;/div&gt;***
+&lt;a href="***/***" class="fancybox" rel="***" title="*** &lt;br&gt;&lt;a href='***/***' style='text-decoration: none'&gt;&lt;font color='#888888'&gt;(*** x ***px)&lt;/font&gt; &lt;img src='dl.png'&gt;&lt;/a&gt; "&gt;&lt;div id="image"&gt;&lt;img src="***/***"&gt;&lt;/div&gt;&lt;/a&gt;***
+&lt;/div&gt;
+&lt;/div&gt;</value>
+    <comment>Entire contents of the .txt file for the ag website</comment>
+  </data>
+</root>
