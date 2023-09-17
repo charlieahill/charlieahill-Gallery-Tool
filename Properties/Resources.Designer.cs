@@ -190,5 +190,16 @@ namespace charlieahill_Gallery_Tool.Properties {
                 return ResourceManager.GetString("txtag", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;div id=&quot;youtubeVid&quot;&gt;
+        ///&lt;iframe width=&quot;464&quot; height=&quot;261&quot; src=&quot;https://www.youtube.com/embed/###&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; autoplay=&quot;1&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+        ///&lt;/div&gt;.
+        /// </summary>
+        internal static string ytlink {
+            get {
+                return ResourceManager.GetString("ytlink", resourceCulture);
+            }
+        }
     }
 }

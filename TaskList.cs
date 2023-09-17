@@ -27,10 +27,12 @@ namespace charlieahill_Gallery_Tool
         //done: Better export wizard setup - kind of done - is done within the bounds of reasonable re-design
         //done: Add key image selection after clicking create - is before create - is all that is possible without complete redesign
         //done: Add tab images selection after clicking create - is before create - is all that is possible without complete redesign
-        //todo: Add to GitHub
-        //todo: Drag and drop re-ordering of images
-
-        //todo: Add youtube video
+        //done: Add to GitHub
+        //cancelled: Drag and drop re-ordering of images - again - not worth pursuing right now in win forms
+        //done: Add youtube video
+        //todo: automatic trim so that you never get the weird black border
+        //todo: Disable tabs on options when not selected rather than delete
+        //todo: Check what gets turned on and off in terms of output by each of those output checks
         //todo: One day find the original better version I had programmed
     }
 }

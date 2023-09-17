@@ -211,4 +211,10 @@
 &lt;/div&gt;</value>
     <comment>Entire contents of the .txt file for the ag website</comment>
   </data>
+  <data name="ytlink" xml:space="preserve">
+    <value>&lt;div id="youtubeVid"&gt;
+&lt;iframe width="464" height="261" src="https://www.youtube.com/embed/###" title="YouTube video player" frameborder="0" autoplay="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</value>
+    <comment>Addition to add after gallery link if a YT link is required</comment>
+  </data>
 </root>

@@ -180,6 +180,7 @@
             // 
             this.imagesListView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.imagesListView.AutoArrange = false;
             this.imagesListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.imagesListView.HideSelection = false;
             this.imagesListView.Location = new System.Drawing.Point(0, 0);

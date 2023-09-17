@@ -181,6 +181,15 @@ namespace charlieahill_Gallery_Tool
             get { return mainImage; }
         }
 
+        private string youTubeLink = string.Empty;
+        /// <summary>YouTube video link if one is available</summary>
+        public string YouTubeLink
+        {
+            get { return youTubeLink; }
+            set { youTubeLink = value; }
+        }
+
+
         private ResizingParams mainImageResizingParams = new ResizingParams(ResizingParams.ResizeModeEnum.maintainAspect, ResizingParams.MARModeEnum.scaleToWidth, ResizingParams.CropModeEnum.cropScaleToHeight, 1660, 0, 0, 0, 0, 0);
         /// <summary>Parameters that determine how the image resizing is performed</summary>
         public ResizingParams MainImageResizingParams
@@ -717,6 +726,11 @@ namespace charlieahill_Gallery_Tool
         private void chkAgSite_CheckedChanged(object sender, EventArgs e)
         {
             AgExport = chkAgSite.Checked;
+        }
+
+        private void YouTubeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            youTubeLink = YouTubeTextBox.Text;
         }
     }
 }

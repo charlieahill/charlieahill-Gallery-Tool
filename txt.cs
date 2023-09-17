@@ -19,6 +19,7 @@ namespace charlieahill_Gallery_Tool
         }
 
         public string[] fixedData;
+        public string[] fixedYTData;
 
         public txt(options Options)
         {
@@ -36,6 +37,15 @@ namespace charlieahill_Gallery_Tool
             string[] splitString = new string[] {"***"};
             fixedData = readIn.Split(splitString, StringSplitOptions.RemoveEmptyEntries);
             System.Diagnostics.Debug.WriteLine("Split to " + fixedData.Count() + " entries");
+
+            //readin and split the YouTube section
+            string readInYouTube;
+            if (Options.YouTubeLink.Trim() == string.Empty) return;
+            readInYouTube = Properties.Resources.ytlink;
+            System.Diagnostics.Debug.WriteLine("Loaded yt txt");
+            string[] splitYTString = new string[] { "###" };
+            fixedYTData = readInYouTube.Split(splitYTString, StringSplitOptions.RemoveEmptyEntries);
+            System.Diagnostics.Debug.WriteLine("Split to " + fixedData.Count() + " entries");
         }
 
         /// <summary>Calculates the entire output file for the php file</summary>
@@ -51,6 +61,9 @@ namespace charlieahill_Gallery_Tool
             stringBuilder.Append(fixedData[3]);
             stringBuilder.Append(Options.PhpFileName);
             stringBuilder.Append(fixedData[4]);
+            stringBuilder.Append(fixedYTData[0]);
+            stringBuilder.Append(Options.YouTubeLink);
+            stringBuilder.Append(fixedYTData[1]);
         }
 
         internal void AddImageToOutputFile(options Options, ImageContainer image)
@@ -64,7 +77,7 @@ namespace charlieahill_Gallery_Tool
             stringBuilder.Append(fixedData[8]);
             stringBuilder.Append(image.Caption);
             if(image.Caption.Trim() != string.Empty)
-            stringBuilder.Append(fixedData[9]);
+                stringBuilder.Append(fixedData[9]);
             else
                 stringBuilder.Append(fixedData[9].Replace(" <br>",string.Empty));
             stringBuilder.Append(Options.GalleryName);
