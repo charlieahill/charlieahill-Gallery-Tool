@@ -4,7 +4,9 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace charlieahill_Gallery_Tool
 {
@@ -80,8 +82,21 @@ namespace charlieahill_Gallery_Tool
             System.Diagnostics.Debug.WriteLine("Writing to txt file at " + filename);
             File.WriteAllText(filename, TXT.String());
 
-            //Create ZIP of content - https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.zipfile?view=net-7.0
-            ZipFile.CreateFromDirectory(filename, $"{filename}\\upload.zip");
+            try
+            {
+                //Create ZIP of content - https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.zipfile?view=net-7.0
+                string tempPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/CHillSW/GallTool/";
+                if (!Directory.Exists(tempPath))
+                    Directory.CreateDirectory(tempPath);
+                if (File.Exists($"{tempPath}\\upload.zip"))
+                    File.Delete($"{tempPath}\\upload.zip");
+                ZipFile.CreateFromDirectory(outputPath, $"{tempPath}\\upload.zip");
+                File.Move($"{tempPath}\\upload.zip", $"{outputPath}\\upload.zip");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Unable to generate zip file." + Environment.NewLine + Environment.NewLine + e.Message);
+            }
 
             filename = outputPath + "\\readme_index.txt";
             System.Diagnostics.Debug.WriteLine("Writing to index file at " + filename);
