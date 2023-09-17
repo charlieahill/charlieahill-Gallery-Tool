@@ -32,9 +32,9 @@ namespace charlieahill_Gallery_Tool
         //done: Add youtube video
         //done: automatic trim so that you never get the weird black border
         //done: Disable tabs on options when not selected rather than delete - with stack overflow and smoke and mirrors interpretation
-        //todo: Check what gets turned on and off in terms of output by each of those output checks
+        //cancelled: Check what gets turned on and off in terms of output by each of those output checks - even download outputs the download link - I never turn these off, why make sure they are OK?
+        //done: Delete not working on the first image
+        //done: Zip on completion of export
         //todo: One day find the original better version I had programmed
-        //todo: Delete not working on the first image
-        //todo: Zip on completion of export
     }
 }

@@ -342,8 +342,6 @@ namespace charlieahill_Gallery_Tool
 
             int selectedIndex = imagesListView.SelectedIndices[0];
 
-            if (selectedIndex == 0) return;
-
             Images.RemoveAt(selectedIndex);
             ShowAllImagesInListView();
         }

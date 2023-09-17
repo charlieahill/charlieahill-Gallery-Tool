@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,13 +72,16 @@ namespace charlieahill_Gallery_Tool
         /// <summary>Output all files to hdd</summary>
         internal void OutputAllFiles(options Options, string outputPath)
         {
-            string filename = outputPath + "\\" +  Options.PhpFileName;
+            string filename = outputPath + "\\" + Options.PhpFileName;
             System.Diagnostics.Debug.WriteLine("Writing to php file at " + filename);
             File.WriteAllText(filename, PHP.String());
 
             filename = outputPath + "\\" + Options.TxtFileName;
             System.Diagnostics.Debug.WriteLine("Writing to txt file at " + filename);
             File.WriteAllText(filename, TXT.String());
+
+            //Create ZIP of content - https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.zipfile?view=net-7.0
+            ZipFile.CreateFromDirectory(filename, $"{filename}\\upload.zip");
 
             filename = outputPath + "\\readme_index.txt";
             System.Diagnostics.Debug.WriteLine("Writing to index file at " + filename);
