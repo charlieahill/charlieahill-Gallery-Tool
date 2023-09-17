@@ -158,7 +158,7 @@ namespace charlieahill_Gallery_Tool
             get { return tabImage; }
         }
 
-        private ResizingParams tabImageResizingParams = new ResizingParams(ResizingParams.ResizeModeEnum.cropToFit, ResizingParams.MARModeEnum.scaleToWidth, ResizingParams.CropModeEnum.cropScaleToWidth, 0, 0, 220, 0, 0, 124);
+        private ResizingParams tabImageResizingParams = new ResizingParams(ResizingParams.ResizeModeEnum.cropToFit, ResizingParams.MARModeEnum.scaleToWidth, ResizingParams.CropModeEnum.cropScaleToWidth, 0, 0, 220, 0, 0, 124, true);
         /// <summary>Parameters that determine how the image resizing is performed</summary>
         public ResizingParams TabImageResizingParams
         {
@@ -562,6 +562,12 @@ namespace charlieahill_Gallery_Tool
                 //Update GUI
                 EnableMainNumericBoxes();
             }
+        }
+
+        /// <summary></summary>
+        private void SmartAdjustCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            tabImageResizingParams.AutoAdjustSmartScaleMode = ((CheckBox)sender).Checked;
         }
 
         /// <summary>Crop: Scale to height Button Changes Checkedness</summary>

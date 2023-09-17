@@ -26,10 +26,35 @@ namespace charlieahill_Gallery_Tool
             }
             else
             {
-                if(resizeParams.CropScalingMode == ResizingParams.CropModeEnum.cropScaleToWidth)
-                    calculateScalingFactorFrom = scaling.width;
+                if (resizeParams.AutoAdjustSmartScaleMode)
+                {
+                    int outputWidth = Math.Max(resizeParams.CropScalingWidth, resizeParams.CropTrimWidth);
+                    int outputHeight = Math.Max(resizeParams.CropScalingHeight, resizeParams.CropTrimHeight);
+
+                    double scalingFactorFromWidth = (double)outputWidth / (double)image.Width;
+                    double scalingFactorFromHeight = (double)outputHeight / (double)image.Height;
+
+                    resizeParams.CropScalingHeight = resizeParams.CropTrimHeight = outputHeight;
+                    resizeParams.CropScalingWidth = resizeParams.CropTrimWidth = outputWidth;
+
+                    if (scalingFactorFromWidth > scalingFactorFromHeight)
+                    {
+                        resizeParams.CropScalingMode = ResizingParams.CropModeEnum.cropScaleToWidth;
+                        calculateScalingFactorFrom = scaling.width;
+                    }
+                    else
+                    {
+                        resizeParams.CropScalingMode = ResizingParams.CropModeEnum.cropScaleToHeight;
+                        calculateScalingFactorFrom = scaling.height;
+                    }
+                }
                 else
-                    calculateScalingFactorFrom = scaling.height;
+                {
+                    if (resizeParams.CropScalingMode == ResizingParams.CropModeEnum.cropScaleToWidth)
+                        calculateScalingFactorFrom = scaling.width;
+                    else
+                        calculateScalingFactorFrom = scaling.height;
+                }
             }
 
             Debug("Calculating scaling factor from " + calculateScalingFactorFrom.ToString());

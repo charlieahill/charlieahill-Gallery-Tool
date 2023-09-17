@@ -61,9 +61,12 @@ namespace charlieahill_Gallery_Tool
             stringBuilder.Append(fixedData[3]);
             stringBuilder.Append(Options.PhpFileName);
             stringBuilder.Append(fixedData[4]);
-            stringBuilder.Append(fixedYTData[0]);
-            stringBuilder.Append(Options.YouTubeLink);
-            stringBuilder.Append(fixedYTData[1]);
+            if (Options.YouTubeLink.Trim() != string.Empty)
+            {
+                stringBuilder.Append(fixedYTData[0]);
+                stringBuilder.Append(Options.YouTubeLink);
+                stringBuilder.Append(fixedYTData[1]);
+            }
         }
 
         internal void AddImageToOutputFile(options Options, ImageContainer image)

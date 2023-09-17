@@ -26,7 +26,8 @@ namespace charlieahill_Gallery_Tool
             int inCropScalingWidth = 100,
             int inCropScalingHeight = 100,
             int inCropTrimWidth = 100,
-            int inCropTrimHeight = 100)
+            int inCropTrimHeight = 100,
+            bool inAutoAdjustSmartScaleMode = false)
         {
             resizeMode = inResizeMode;
             marMode = inMarMode;
@@ -37,6 +38,7 @@ namespace charlieahill_Gallery_Tool
             cropScalingHeight = inCropScalingHeight;
             cropTrimWidth = inCropTrimWidth;
             cropTrimHeight = inCropTrimHeight;
+            autoAdjustSmartScaleMode = inAutoAdjustSmartScaleMode;
         }
 
 
@@ -118,6 +120,15 @@ namespace charlieahill_Gallery_Tool
             get { return cropTrimHeight; }
             set { cropTrimHeight = value; }
         }
+
+        private bool autoAdjustSmartScaleMode;
+        /// <summary>Image should be adjusted in auto adjust smart scale mode</summary>
+        public bool AutoAdjustSmartScaleMode
+        {
+            get { return autoAdjustSmartScaleMode; }
+            set { autoAdjustSmartScaleMode = value; }
+        }
+
         #endregion
     }
 }

@@ -102,6 +102,7 @@
             this.btnOutputSelect = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.optionsTabs = new System.Windows.Forms.TabControl();
+            this.SmartAdjustCheckbox = new System.Windows.Forms.CheckBox();
             this.tabContent.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -529,6 +530,7 @@
             // 
             // pnlCrop
             // 
+            this.pnlCrop.Controls.Add(this.SmartAdjustCheckbox);
             this.pnlCrop.Controls.Add(this.label5);
             this.pnlCrop.Controls.Add(this.numTabTrimtoWidth);
             this.pnlCrop.Controls.Add(this.numTabScaleHeight);
@@ -539,7 +541,7 @@
             this.pnlCrop.Controls.Add(this.radTabScaleWidth);
             this.pnlCrop.Location = new System.Drawing.Point(6, 139);
             this.pnlCrop.Name = "pnlCrop";
-            this.pnlCrop.Size = new System.Drawing.Size(288, 55);
+            this.pnlCrop.Size = new System.Drawing.Size(288, 75);
             this.pnlCrop.TabIndex = 5;
             // 
             // label5
@@ -974,6 +976,19 @@
             this.optionsTabs.Size = new System.Drawing.Size(312, 261);
             this.optionsTabs.TabIndex = 1;
             // 
+            // SmartAdjustCheckbox
+            // 
+            this.SmartAdjustCheckbox.AutoSize = true;
+            this.SmartAdjustCheckbox.Checked = true;
+            this.SmartAdjustCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.SmartAdjustCheckbox.Location = new System.Drawing.Point(18, 52);
+            this.SmartAdjustCheckbox.Name = "SmartAdjustCheckbox";
+            this.SmartAdjustCheckbox.Size = new System.Drawing.Size(220, 17);
+            this.SmartAdjustCheckbox.TabIndex = 16;
+            this.SmartAdjustCheckbox.Text = "Smart adjust: automatically trim dimension";
+            this.SmartAdjustCheckbox.UseVisualStyleBackColor = true;
+            this.SmartAdjustCheckbox.CheckedChanged += new System.EventHandler(this.SmartAdjustCheckBox_CheckedChanged);
+            // 
             // options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1104,5 +1119,6 @@
         private System.Windows.Forms.TextBox YouTubeTextBox;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.CheckBox SmartAdjustCheckbox;
     }
 }
