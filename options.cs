@@ -19,6 +19,50 @@ namespace charlieahill_Gallery_Tool
             System.Diagnostics.Debug.WriteLine("Loaded options.cs");
             InitializeComponent();
             txtOutputPath.Text = outputPath;
+
+            optionsTabs.DrawMode = TabDrawMode.OwnerDrawFixed;
+            optionsTabs.DrawItem += DisableTab_DrawItem;
+            optionsTabs.Selecting += DisableTab_Selecting;
+
+            tabDownload.EnabledChanged += TabDownload_EnabledChanged;
+            tabMain.EnabledChanged += TabMain_EnabledChanged;
+            tabTab.EnabledChanged += TabTab_EnabledChanged;
+        }
+
+        private void TabTab_EnabledChanged(object sender, EventArgs e)
+        {
+            optionsTabs.Refresh();
+        }
+
+        private void TabMain_EnabledChanged(object sender, EventArgs e)
+        {
+            optionsTabs.Refresh();
+        }
+
+        private void TabDownload_EnabledChanged(object sender, EventArgs e)
+        {
+            optionsTabs.Refresh();
+        }
+
+        private void DisableTab_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (!e.TabPage.Enabled)
+                e.Cancel = true;
+        }
+
+        //https://stackoverflow.com/questions/418006/how-can-i-disable-a-tab-inside-a-tabcontrol#:~:text=You%20can%20simply%20use%3A,it%20works%20without%20any%20problems.
+        //https://web.archive.org/web/20131102065816/http://tutorials.csharp-online.net/Disabling_Tab_Pages
+        private void DisableTab_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tabControl = sender as TabControl;
+            TabPage tabPage = tabControl.TabPages[e.Index];
+
+            if (!tabPage.Enabled)
+                using (SolidBrush brush = new SolidBrush(SystemColors.GrayText))
+                    e.Graphics.DrawString(tabPage.Text, tabPage.Font, brush, e.Bounds.X + 3, e.Bounds.Y + 3);
+            else
+                using (SolidBrush brush = new SolidBrush(tabPage.ForeColor))
+                    e.Graphics.DrawString(tabPage.Text, tabPage.Font, brush, e.Bounds.X + 3, e.Bounds.Y + 3);
         }
 
         /******************************VARS***********************/
@@ -679,7 +723,7 @@ namespace charlieahill_Gallery_Tool
         /// <summary>Show / hide tabs as necessary</summary>
         /// <param name="tabName">The tab name to hide or show as necessary</param>
         /// <param name="isVisible">Should that tab be visible?</param>
-        void ShowHideTab(string tabName, bool isVisible)
+        /*void ShowHideTab(string tabName, bool isVisible)
         {
             //show or hide relevant tab
             if(isVisible)
@@ -698,6 +742,15 @@ namespace charlieahill_Gallery_Tool
 
                 optionsTabs.SelectedIndex = previousIndex;
             }
+        }*/
+
+        /// <summary>Show / hide tabs as necessary</summary>
+        /// <param name="tabName">The tab name to hide or show as necessary</param>
+        /// <param name="isVisible">Should that tab be visible?</param>
+        void ShowHideTab(string tabName, bool isVisible)
+        {
+            int tabIndex = optionsTabs.TabPages.IndexOfKey(tabName);
+            optionsTabs.TabPages[tabIndex].Enabled = isVisible;
         }
 
         /// <summary>Returns a string format of a number, padded to three spaces with leading zeroes</summary>

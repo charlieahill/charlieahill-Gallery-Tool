@@ -31,7 +31,7 @@ namespace charlieahill_Gallery_Tool
         //cancelled: Drag and drop re-ordering of images - again - not worth pursuing right now in win forms
         //done: Add youtube video
         //done: automatic trim so that you never get the weird black border
-        //todo: Disable tabs on options when not selected rather than delete
+        //done: Disable tabs on options when not selected rather than delete - with stack overflow and smoke and mirrors interpretation
         //todo: Check what gets turned on and off in terms of output by each of those output checks
         //todo: One day find the original better version I had programmed
         //todo: Delete not working on the first image

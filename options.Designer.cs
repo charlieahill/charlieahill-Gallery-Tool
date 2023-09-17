@@ -64,6 +64,7 @@
             this.radMainCropToFit = new System.Windows.Forms.RadioButton();
             this.tabTab = new System.Windows.Forms.TabPage();
             this.pnlCrop = new System.Windows.Forms.Panel();
+            this.SmartAdjustCheckbox = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.numTabTrimtoWidth = new System.Windows.Forms.NumericUpDown();
             this.numTabScaleHeight = new System.Windows.Forms.NumericUpDown();
@@ -102,7 +103,6 @@
             this.btnOutputSelect = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.optionsTabs = new System.Windows.Forms.TabControl();
-            this.SmartAdjustCheckbox = new System.Windows.Forms.CheckBox();
             this.tabContent.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -544,6 +544,19 @@
             this.pnlCrop.Size = new System.Drawing.Size(288, 75);
             this.pnlCrop.TabIndex = 5;
             // 
+            // SmartAdjustCheckbox
+            // 
+            this.SmartAdjustCheckbox.AutoSize = true;
+            this.SmartAdjustCheckbox.Checked = true;
+            this.SmartAdjustCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.SmartAdjustCheckbox.Location = new System.Drawing.Point(18, 52);
+            this.SmartAdjustCheckbox.Name = "SmartAdjustCheckbox";
+            this.SmartAdjustCheckbox.Size = new System.Drawing.Size(220, 17);
+            this.SmartAdjustCheckbox.TabIndex = 16;
+            this.SmartAdjustCheckbox.Text = "Smart adjust: automatically trim dimension";
+            this.SmartAdjustCheckbox.UseVisualStyleBackColor = true;
+            this.SmartAdjustCheckbox.CheckedChanged += new System.EventHandler(this.SmartAdjustCheckBox_CheckedChanged);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -975,19 +988,6 @@
             this.optionsTabs.SelectedIndex = 0;
             this.optionsTabs.Size = new System.Drawing.Size(312, 261);
             this.optionsTabs.TabIndex = 1;
-            // 
-            // SmartAdjustCheckbox
-            // 
-            this.SmartAdjustCheckbox.AutoSize = true;
-            this.SmartAdjustCheckbox.Checked = true;
-            this.SmartAdjustCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.SmartAdjustCheckbox.Location = new System.Drawing.Point(18, 52);
-            this.SmartAdjustCheckbox.Name = "SmartAdjustCheckbox";
-            this.SmartAdjustCheckbox.Size = new System.Drawing.Size(220, 17);
-            this.SmartAdjustCheckbox.TabIndex = 16;
-            this.SmartAdjustCheckbox.Text = "Smart adjust: automatically trim dimension";
-            this.SmartAdjustCheckbox.UseVisualStyleBackColor = true;
-            this.SmartAdjustCheckbox.CheckedChanged += new System.EventHandler(this.SmartAdjustCheckBox_CheckedChanged);
             // 
             // options
             // 
